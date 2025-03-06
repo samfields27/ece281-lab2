@@ -42,8 +42,8 @@ architecture Behavioral of sevenseg_decoder_tb is
            o_seg_n : in STD_LOGIC_VECTOR (6 downto 0));      
    end component sevenseg_decoder;
    
-   	signal w_num     : std_logic_vector(15 downto 0) := b"0000"; -- the numbers being added
-	signal w_Cout : std_logic_vector(127 downto 0) := b"0000000";
+   	signal w_num     : std_logic_vector(15 downto 0) := "0000"; -- the numbers being added
+	signal w_Cout : std_logic_vector(127 downto 0) := "0000000";
 
 begin
 
@@ -56,8 +56,8 @@ begin
 	begin
 	
 	   -- Test all zeros input
-	   w_num <= b"0000"; wait for 10 ns;
-	       assert (w_Cout = b"0111111") report "Zero display" severity failure;
+	   w_num <= "0000"; wait for 10 ns;
+	       assert (w_Cout = "0111111") report "Zero display" severity failure;
 	   w_num <= "0001"; wait for 10 ns;
 	       assert (w_Cout = "0000110") report "One display" severity failure;
 	   w_num <= "0010"; wait for 10 ns;
