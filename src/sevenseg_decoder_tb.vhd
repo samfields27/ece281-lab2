@@ -42,8 +42,8 @@ architecture Behavioral of sevenseg_decoder_tb is
            o_seg_n : in STD_LOGIC_VECTOR (6 downto 0));      
    end component sevenseg_decoder;
    
-   	signal w_num     : std_logic_vector(15 downto 0) := b"0000"; -- the numbers being added
-	signal w_Cout : std_logic_vector(127 downto 0) :=b"0000000";
+   	signal w_num     : std_logic_vector(15 downto 0) := "0000"; -- the numbers being added
+	signal w_Cout : std_logic_vector(127 downto 0) := "0000000";
 
 begin
 
