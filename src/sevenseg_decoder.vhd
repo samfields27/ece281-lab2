@@ -56,6 +56,6 @@ o_seg_n <=  "0111111" when "0000",
         "1011110" when "1101",
         "1111001" when "1110",
         "1110001" when "1111",
-        "0000000" when others;
+       -- "0000000" when others;
 
 end Behavioral;
